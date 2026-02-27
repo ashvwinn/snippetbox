@@ -1,0 +1,17 @@
+services:
+    db:
+        image: mysql
+        container_name: snippetbox_db
+        restart: always
+        environment:
+            MYSQL_ROOT_PASSWORD: pass
+            MYSQL_DATABASE: snippetbox
+            MYSQL_USER: web
+            MYSQL_PASSWORD: pass
+        ports:
+            - "3306:3306"
+        volumes:
+            - mysql_data:/var/lib/mysql
+
+volumes:
+    mysql_data:
