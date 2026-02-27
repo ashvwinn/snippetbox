@@ -4,10 +4,10 @@ services:
         container_name: snippetbox_db
         restart: always
         environment:
-            MYSQL_ROOT_PASSWORD: pass
+            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
             MYSQL_DATABASE: snippetbox
-            MYSQL_USER: web
-            MYSQL_PASSWORD: pass
+            MYSQL_USER: ${MYSQL_USER}
+            MYSQL_PASSWORD: ${MYSQL_PASSWORD}
         ports:
             - "3306:3306"
         volumes:
