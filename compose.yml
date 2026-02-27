@@ -1,11 +1,11 @@
 services:
     db:
-        image: mysql
+        image: mysql:9.6.0
         container_name: snippetbox_db
         restart: always
         environment:
             MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-            MYSQL_DATABASE: snippetbox
+            MYSQL_DATABASE: ${MYSQL_DATABASE}
             MYSQL_USER: ${MYSQL_USER}
             MYSQL_PASSWORD: ${MYSQL_PASSWORD}
         ports:
